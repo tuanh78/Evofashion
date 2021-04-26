@@ -1,0 +1,12 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    &__container {
+        max-width: 1905px;
+    }
+    &__img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+}

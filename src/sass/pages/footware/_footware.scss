@@ -1,0 +1,26 @@
+.no-product {
+    max-width: 840px;
+    background-color: $color-div-no-product;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    position: relative;
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $color-gray;
+        cursor: pointer;
+    }
+
+    span:hover {
+        color: $color-black;
+    }
+}

@@ -1,0 +1,64 @@
+.btn {
+    text-align: center;
+    a {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: inline-block;
+        padding: 1rem 2rem;
+        color: $color-white;
+        background-color: $color-red;
+        text-transform: capitalize;
+        @include ResponsiveFlexible(745px) {
+            font-size: 1.3rem;
+        }
+
+        @include Responsive(ipad) {
+            padding: 1rem;
+        }
+
+        @include ResponsiveFlexible(600px) {
+            font-size: 1.1rem;
+        }
+
+        @include Responsive(ip6plus) {
+            font-size: 1rem;
+            padding: 1rem 0.5rem;
+        }
+
+        @include Responsive(ip5) {
+            font-size: 1rem;
+        }
+    }
+
+    a:hover {
+        background-color: $color-black;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 10rem;
+    padding: 0.8rem 1rem;
+    background-color: $color-black;
+    color: $color-white;
+    font-size: 2rem;
+    border: 2px solid $color-white;
+    border-radius: 5px;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: $color-red;
+    }
+}
+
+.show-btn {
+    visibility: visible;
+    opacity: 1;
+    bottom: 5rem;
+    z-index: 9999;
+}

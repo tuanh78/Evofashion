@@ -1,0 +1,274 @@
+.product-highlight {
+    padding-bottom: 6rem;
+
+    @include ResponsiveFlexible(913px) {
+        padding-bottom: 8rem;
+    }
+
+    @include ResponsiveFlexible(791px) {
+        padding-bottom: 10rem;
+    }
+
+    @include Responsive(ipad) {
+        padding-bottom: 12rem;
+    }
+    @include Responsive(ip6plus) {
+        padding-bottom: 7rem;
+    }
+    &__container {
+        @include flexbox(space-between, wrap, row);
+        @include ResponsiveFlexible(503px) {
+            justify-content: center;
+        }
+    }
+
+    &__img {
+        a {
+            display: block;
+            text-align: center;
+
+            img {
+                @include Responsive(ip5) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    &__item {
+        width: calc(33.333333% - 1.333333rem);
+        position: relative;
+        margin: 0 auto;
+        @include ResponsiveFlexible(503px) {
+            width: 70%;
+            margin-bottom: 8rem;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        @include Responsive(ip5) {
+            margin-bottom: 7rem;
+            &__bg {
+                @include flexbox(center, wrap, row);
+                img {
+                    height: 350px;
+                }
+            }
+        }
+
+        &__content {
+            position: absolute;
+            top: 2.5%;
+            left: 50%;
+            width: 90%;
+            height: 95%;
+            transform: translateX(-50%);
+            @include flexbox-vertical-center();
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+
+            @include Responsive(ip5) {
+                width: 80%;
+            }
+            h2 {
+                font-size: 3rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                margin-bottom: 2.7rem;
+                width: 100%;
+
+                @include Responsive(ipad) {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                @include ResponsiveFlexible(601px) {
+                    font-size: 1.3rem;
+                }
+
+                @include Responsive(ip5) {
+                    font-size: 1.3rem;
+                }
+            }
+
+            h3 {
+                font-size: 3rem;
+                font-weight: 300;
+                color: $color-red;
+                font-weight: 400;
+                margin-bottom: 3rem;
+                width: 100%;
+                @include Responsive(ipad) {
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                @include ResponsiveFlexible(601px) {
+                    font-size: 1.5rem;
+                }
+
+                @include Responsive(ip5) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            p:nth-child(3) {
+                font-size: 12rem;
+                color: $color-gray;
+                margin-bottom: 1rem;
+                font-weight: 500;
+                @include ResponsiveFlexible(912px) {
+                    font-size: 8rem;
+                }
+
+                @include Responsive(ipad) {
+                    font-size: 7rem;
+                    margin-bottom: 1rem;
+                }
+
+                @include ResponsiveFlexible(601px) {
+                    font-size: 5rem;
+                }
+
+                @include Responsive(ip5) {
+                    font-size: 5rem;
+                }
+            }
+
+            p:nth-child(4) {
+                font-size: 2rem;
+                color: $color-gray;
+                margin-bottom: 2.5rem;
+
+                @include Responsive(ipad) {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                @include ResponsiveFlexible(601px) {
+                    font-size: 1.3rem;
+                }
+
+                @include Responsive(ip5) {
+                    font-size: 1.3rem;
+                }
+            }
+
+            p:nth-child(5) {
+                font-size: 2rem;
+                color: $color-gray;
+                margin-bottom: 2.5rem;
+
+                @include Responsive(ipad) {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                @include ResponsiveFlexible(601px) {
+                    font-size: 1.3rem;
+                }
+
+                @include Responsive(ip5) {
+                    font-size: 1.4rem;
+                }
+
+                span {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    &__item:nth-child(2) {
+        margin-bottom: 2.5rem;
+    }
+
+    &__detail {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-white;
+        padding: 3rem 1rem;
+        box-shadow: 0px 10px 20px -8px $color-black;
+        width: 80%;
+        text-align: center;
+
+        @include Responsive(ip6plus) {
+            width: 60%;
+            padding: 1.5rem 2rem;
+        }
+
+        @include ResponsiveFlexible(377px) {
+            width: 100%;
+            position: static;
+            transform: translateX(0);
+        }
+
+        p {
+            margin-bottom: 2.5rem;
+            font-size: 1.3rem;
+
+            @include Responsive(ipad) {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+            }
+
+            @include ResponsiveFlexible(601px) {
+                font-size: 1.1rem;
+            }
+
+            @include ResponsiveFlexible(551px) {
+                margin-bottom: 1rem;
+            }
+
+            @include Responsive(ip6plus) {
+                margin-bottom: 0.5rem;
+            }
+
+            @include Responsive(ip5) {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        h4 {
+            font-size: 2rem;
+            font-weight: 600;
+            white-space: wrap;
+            margin-bottom: 1rem;
+            width: 100%;
+            @include ResponsiveFlexible(912px) {
+                font-size: 1.5rem;
+            }
+
+            @include Responsive(ipad) {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                line-height: 2.5rem;
+            }
+
+            @include ResponsiveFlexible(601px) {
+                font-size: 1.3rem;
+            }
+
+            @include ResponsiveFlexible(551px) {
+                margin-bottom: 1rem;
+            }
+
+            @include Responsive(ip6plus) {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            @include Responsive(ip5) {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

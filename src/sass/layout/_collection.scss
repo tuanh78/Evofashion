@@ -1,0 +1,205 @@
+.collection {
+    padding-bottom: 45.5rem;
+    @include ResponsiveFlexible(1005px) {
+        padding-bottom: 35rem;
+    }
+
+    @include ResponsiveFlexible(912px) {
+        padding-bottom: 27rem;
+    }
+
+    @include Responsive(ipad) {
+        padding-bottom: 20.5rem;
+    }
+
+    @include ResponsiveFlexible(503px) {
+        padding-bottom: 14rem;
+    }
+
+    @include ResponsiveFlexible(447px) {
+        padding-bottom: 100rem;
+    }
+
+    @include ResponsiveFlexible(421px) {
+        padding-bottom: 92rem;
+    }
+
+    @include Responsive(ip6plus) {
+        padding-bottom: 5rem;
+    }
+    &__container {
+        max-width: 1905px;
+        margin: 0 auto;
+        padding-top: 11.5rem;
+        padding-bottom: 24rem;
+        padding-left: 0;
+        padding-right: 0;
+        background-image: url("https://bizweb.dktcdn.net/100/364/481/themes/733696/assets/evo_banner_collection.jpg?1599617835537");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        @include ResponsiveFlexible(912px) {
+            padding-top: 5.5rem;
+        }
+
+        @include Responsive(ipad) {
+            padding-top: 5.5rem;
+        }
+
+        @include Responsive(ip6plus) {
+            padding-top: 2.5rem;
+            padding-bottom: 0rem;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 1rem;
+    }
+
+    &__name {
+        text-align: center;
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+            @include ResponsiveFlexible(601px) {
+                font-size: 2rem;
+            }
+
+            @include Responsive(ip6plus) {
+                margin-bottom: 2rem;
+            }
+
+            @include Responsive(ip5) {
+                font-size: 1.5rem;
+            }
+        }
+
+        h3 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            @include Responsive(ipad) {
+                font-size: 3rem;
+            }
+            @include ResponsiveFlexible(601px) {
+                font-size: 2rem;
+            }
+
+            @include  Responsive(ip6plus) {
+                margin-bottom: 2rem;
+            }
+
+            @include Responsive(ip5) {
+                font-size: 1.7rem;
+            }
+        }
+
+        h3:nth-last-child(2) {
+            margin-bottom: 3.5rem;
+            @include Responsive(ip5) {
+                margin-bottom: 2rem;
+            }
+            span {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__category {
+        position: absolute;
+        top: 61.8%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 72.56%;
+        padding: 3.5rem 3.7rem 5rem;
+        background-color: $color-white;
+        box-shadow: 0px 10px 20px -8px $color-black;
+
+        @include Responsive(ip6plus) {
+            position: static;
+            transform: translateX(0);
+            width: 100%;
+            padding-bottom: 0rem;
+        }
+
+        @include Responsive(ip5) {
+            padding: 1.5rem 0 5rem;
+        }
+
+        &__container {
+            @include flexbox(space-between, wrap, row);
+            padding: 0;
+            @include ResponsiveFlexible(447px) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &__item {
+            width: calc(33.333333% - 1.333333rem);
+            @include ResponsiveFlexible(447px) {
+                width: 80%;
+            }
+
+            @include ResponsiveFlexible(415px) {
+                width: 65%;
+            }
+
+            &__img {
+                margin-bottom: 4rem;
+                @include ResponsiveFlexible(447px) {
+                    margin-bottom: 1rem;
+                }
+                @include Responsive(ip5) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__name {
+                font-size: 2.5rem;
+                font-weight: 400;
+
+                @include Responsive(ipad) {
+                    font-size: 2rem;
+                }
+
+                @include ResponsiveFlexible(503px) {
+                    font-size: 1.5rem;
+                }
+
+                @include ResponsiveFlexible(447px) {
+                    padding-bottom: 4rem;
+                }
+
+                @include Responsive(ip5) {
+                    font-size: 1.5rem;
+                    padding-bottom: 2rem;
+                }
+
+                a {
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        width: 50%;
+                        height: 0.2rem;
+                        background-color: $color-black;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+                a:hover {
+                    &:after {
+                        width: 100%;
+                        background-color: $color-red;
+                    }
+                }
+            }
+        }
+    }
+}

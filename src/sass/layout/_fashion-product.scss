@@ -1,0 +1,213 @@
+.fashion-product {
+    padding-bottom: 4rem;
+    overflow: hidden;
+    @include ResponsiveFlexible(516px) {
+        padding-bottom: 0;
+    }
+    &__category {
+        @include flexbox(flex-start, wrap, row);
+        margin-bottom: 2.5rem;
+
+        @include Responsive(ipad) {
+            display: block;
+        }
+
+        @include Responsive(ip5) {
+            margin-bottom: 1rem;
+        }
+
+        input {
+            display: none;
+        }
+
+        input:checked + ul {
+            display: block;
+        }
+
+        &__heading {
+            div {
+                display: none;
+            }
+        }
+        @include Responsive(ip6plus) {
+            &__heading {
+                @include flexbox(space-between, wrap, row);
+
+                h2 {
+                    width: 90%;
+                    margin-right: 0;
+                }
+
+                div {
+                    width: 10%;
+                    display: block;
+                }
+            }
+        }
+
+        &__btn-menu {
+            label {
+                width: 1.5rem;
+            }
+        }
+
+        ul {
+            @include flexbox(flex-start, wrap, row);
+            @include Responsive(ip6plus) {
+                flex-direction: column;
+                display: none;
+            }
+
+            li {
+                @include flexbox-vertical-center();
+                margin-right: 2.5rem;
+                font-size: 1.6rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                border-bottom: 3px solid transparent;
+                cursor: pointer;
+
+                @include ResponsiveFlexible(879px) {
+                    padding: 0.5rem;
+                }
+
+                @include ResponsiveFlexible(716px) {
+                    font-size: 1.3rem;
+                }
+
+                @include ResponsiveFlexible(616px) {
+                    margin-right: 1rem;
+                }
+
+                @include ResponsiveFlexible(556px) {
+                    margin-right: 0;
+                }
+
+                @include ResponsiveFlexible(516px) {
+                    font-size: 1rem;
+                }
+
+                @include Responsive(ip6plus) {
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                }
+
+                @include Responsive(ip5) {
+                    font-weight: 500;
+                }
+
+                span:hover {
+                    color: $color-red;
+                    border-bottom-color: $color-red;
+                }
+            }
+        }
+    }
+
+    &__tab {
+        border-bottom: 3px solid transparent;
+        transition: all 0.5s;
+        padding-bottom: 5px;
+        line-height: 20px;
+    }
+
+    &__name {
+        margin-right: 4rem;
+        padding-left: 0.5rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        @include ResponsiveFlexible(912px) {
+            font-size: 2.5rem;
+        }
+
+        @include ResponsiveFlexible(879px) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        @include Responsive(ipad) {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @include Responsive(ip6plus) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__show {
+        @include Responsive(ipad) {
+            padding-bottom: 2rem;
+        }
+        white-space: nowrap;
+        &__container {
+            @include flexbox(space-between, wrap, row);
+
+            //@include Responsive(ip6plus) {
+            //    width: 650px;
+            //}
+        }
+    }
+
+    &__item {
+        text-align: center;
+        padding: 1rem 0 0 0;
+        &:hover {
+            .sale-product__form {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        &__img {
+            margin-bottom: 1rem;
+            position: relative;
+            a {
+                display: block;
+                outline: none;
+                @include flexbox(center, wrap, row);
+
+                img {
+                    width: 95%;
+                }
+
+            }
+        }
+
+        &__name {
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+            @include Responsive(ipad) {
+                font-size: 1.1rem;
+            }
+
+            @include Responsive(ip6plus) {
+                font-size: 1rem;
+            }
+        }
+
+        &__price {
+            span:first-child {
+                font-size: 2rem;
+                @include Responsive(ip6plus) {
+                    font-size: 1.3rem;
+                }
+            }
+
+            span:last-child {
+                font-size: 1.5rem;
+                @include Responsive(ip6plus) {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}

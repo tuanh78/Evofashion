@@ -1,0 +1,53 @@
+@mixin flexbox(
+    $justify-content: flex-start,
+    $flex-wrap: nowrap,
+    $flex-direction: row
+) {
+    display: flex;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+}
+
+@mixin flexbox-vertical-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+// media queries
+
+
+@mixin Responsive($canvas) {
+    @if $canvas == ipad-pro {
+        @media only screen and (max-width: $ipad-pro - 1px) {
+            @content;
+        }
+    } @else if $canvas == ipad {
+        @media only screen and (max-width: $ipad - 1px) {
+            @content;
+        }
+    } @else if $canvas == ip6plus {
+        @media only screen and (max-width: $ip6plus - 1px) {
+            @content;
+        }
+    } @else if $canvas == ip5 {
+        @media only screen and (max-width: $ip5 - 1px) {
+            @content;
+        }
+    }
+}
+
+@mixin ResponsiveFlexible($screen-size) {
+    @media only screen and (max-width: $screen-size - 1px) {
+        @content;
+    }
+}
+
+@keyframes zoom {
+    0%   {transform: rotate(-20deg) scale(1);}
+    100% {transform: rotate(-20deg) scale(1.1);}
+}
+
+

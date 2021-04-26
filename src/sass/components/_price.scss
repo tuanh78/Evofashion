@@ -1,0 +1,12 @@
+.price {
+    span:first-child {
+        margin-right: 1rem;
+        font-weight: 600;
+        color: $color-red;
+    }
+
+    span:last-child {
+        font-size: 1.5rem;
+        text-decoration: line-through;
+    }
+}

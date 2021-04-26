@@ -1,0 +1,186 @@
+.flash-sale {
+    padding: 2rem 0;
+    @include Responsive(ip5) {
+        padding: 2rem 0 4rem 0;
+    }
+    &__container {
+        @include flexbox(flex-start, wrap, row);
+
+        @include ResponsiveFlexible(822px) {
+            flex-direction: column;
+            align-items: center;
+            display: block;
+        }
+
+        @include ResponsiveFlexible(521px) {
+            justify-content: center;
+        }
+    }
+
+    &__name {
+        font-size: 4rem;
+        margin-right: 10rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-left: 0.5rem;
+        @include flexbox-vertical-center();
+
+        @include ResponsiveFlexible(1038px) {
+            margin-right: 4rem;
+        }
+
+        @include ResponsiveFlexible(931px) {
+            font-size: 3rem;
+        }
+
+        @include ResponsiveFlexible(822px) {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        @include ResponsiveFlexible(795px) {
+            margin-bottom: 1rem;
+        }
+
+        @include Responsive(ipad) {
+            font-size: 2.5rem;
+            margin-right: 2rem;
+            text-align: center;
+        }
+        @include Responsive(ip6plus) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        @include Responsive(ip5) {
+            font-size: 2rem;
+        }
+
+        & > a:hover {
+            span {
+              color: $color-red;
+            }
+        }
+
+        i {
+            background-color: $color-black;
+            color: $color-red;
+        }
+    }
+
+    &__time {
+        @include flexbox(space-between, wrap, row);
+        align-items: center;
+
+        @include ResponsiveFlexible(822px) {
+            justify-content: center;
+            width: 100%;
+        }
+
+        &__name {
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 30%;
+
+            @include Responsive(ipad) {
+                font-size: 1.5rem;
+            }
+
+            @include ResponsiveFlexible(822px) {
+                display: none;
+            }
+        }
+
+        .flip-clock-wrapper {
+            width: 70%;
+            display: flex;
+            margin: 0;
+
+            @include ResponsiveFlexible(822px) {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .flip-clock-wrapper ul {
+            width: 40px;
+            height: 40px;
+
+            @include ResponsiveFlexible(991px) {
+                width: 30px;
+            }
+        }
+
+        .flip-clock-wrapper ul li a div div.inn {
+            font-size: 40px;
+            @include ResponsiveFlexible(991px) {
+                font-size: 20px;
+            }
+        }
+
+        .flip-clock-wrapper ul li a div div.inn {
+            @include flexbox-vertical-center();
+        }
+
+        .flip-clock-divider {
+            height: 60px;
+
+            @include ResponsiveFlexible(822px) {
+                @include flexbox-vertical-center();
+            }
+
+            @include ResponsiveFlexible(991px) {
+                height: 40px;
+            }
+
+            @include ResponsiveFlexible(822px) {
+                height: 60px;
+            }
+        }
+
+        .flip-clock-dot {
+            width: 1rem;
+            height: 2rem;
+            background-color: $color-black;
+            border-radius: 1rem;
+            margin-right: 0.5rem;
+
+            @include ResponsiveFlexible(822px) {
+                width: 0.5rem;
+                height: 0.5rem;
+            }
+
+            @include Responsive(ipad) {
+                width: 0.2rem;
+                height: 0.2rem;
+            }
+
+            &.top {
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include ResponsiveFlexible(822px) {
+                    top: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        .bottom {
+            display: none;
+
+            @include ResponsiveFlexible(822px) {
+                bottom: 25px;
+                display: block;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .flip-clock-label {
+            display: none;
+        }
+    }
+}

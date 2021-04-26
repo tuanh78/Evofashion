@@ -1,0 +1,6 @@
+.icon-size {
+    font-size: 3.5rem;
+    @include ResponsiveFlexible(493px) {
+        font-size: 1.5rem;
+    }
+}

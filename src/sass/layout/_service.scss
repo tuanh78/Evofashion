@@ -1,0 +1,110 @@
+.service {
+    @include flexbox(space-between, wrap, row);
+    padding-bottom: 3rem;
+    @include Responsive(ip6plus) {
+        padding-bottom: 0;
+    }
+
+    &__item {
+        text-align: center;
+        width: 25%;
+        padding: 0 1rem;
+        @include Responsive(ip6plus) {
+            width: 50%;
+            margin-bottom: 2rem;
+        }
+        @include Responsive(ip5) {
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        &:hover {
+            .service__icon {
+                border-radius: 5%;
+
+                img {
+                    transform: rotate(360deg);
+                }
+            }
+
+            h3 {
+                a {
+                    color: red;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            line-height: 2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+            @include Responsive(ipad) {
+                font-size: 1.1rem;
+            }
+
+            @include Responsive(ip5) {
+                margin-bottom: 0;
+            }
+
+            a {
+                transition: all 0.5s;
+            }
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+            @include Responsive(ipad) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__icon {
+        width: 5.5rem;
+        height: 5.5rem;
+        @include flexbox-vertical-center();
+        align-items: center;
+        background-color: $color-dark-black;
+        border-radius: 50%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 1.5rem;
+        transition: all 0.3s;
+
+        @include Responsive(ip5) {
+            width: 4.4rem;
+            height: 4.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &:hover {
+            border-radius: 5%;
+
+            img {
+                transform: rotate(360deg);
+            }
+        }
+
+        img {
+            width: 3rem;
+            transition: all 0.5s;
+            @include Responsive(ip5) {
+                width: 2rem;
+            }
+        }
+    }
+}
